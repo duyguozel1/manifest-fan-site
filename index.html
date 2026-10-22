@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manifest | Fan World</title>
+
+    <style>
+        /* GENEL AYARLAR */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff5fb;
+            color: #371c37;
+        }
+
+        /* ÜST MENÜ */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 8%;
+            background: #351630;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffa7dd;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #ffa7dd;
+        }
+
+        /* ANA SAYFA */
+
+        .hero {
+            min-height: 450px;
+            background: linear-gradient(
+                    135deg,
+                    #351630,
+                    #a34b91,
+                    #ed90c6
+            );
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 9vw, 100px);
+            margin: 10px 0;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* BUTONLAR */
+
+        .btn {
+            display: inline-block;
+            background: #ffb9e1;
+            color: #351630;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        /* BÖLÜMLER */
+
+        section {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        /* ÜYELER */
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(180px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .member {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 0;
+
+            box-shadow: 0 6px 20px
+            rgba(0, 0, 0, 0.12);
+
+            transition: transform 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .member h3 {
+            color: #a34b91;
+            padding: 15px;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        /* MÜZİK BÖLÜMÜ */
+
+        .music {
+            background: #351630;
+            color: white;
+        }
+
+        .music p {
+            font-size: 18px;
+        }
+
+        /* C# İLETİŞİM BÖLÜMÜ */
+
+        .api-section {
+            background: #fce1f1;
+        }
+
+        #sonuc {
+            margin-top: 25px;
+            font-size: 20px;
+            color: #8b286d;
+            font-weight: bold;
+        }
+
+        /* ALT BİLGİ */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #241021;
+            color: #eeb6d8;
+        }
+
+        /* TELEFON UYUMU */
+
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ÜST MENÜ -->
+
+<nav>
+    <div class="logo">MANIFEST ✦</div>
+
+    <div>
+        <a href="#home">Ana Sayfa</a>
+        <a href="#uyeler">Üyeler</a>
+        <a href="#muzik">Müzik</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+</nav>
+
+
+<!-- ANA SAYFA -->
+
+<header class="hero" id="home">
+
+    <p>WELCOME TO OUR WORLD</p>
+
+    <h1>MANIFEST</h1>
+
+    <p>6 kız. Tek sahne. Sonsuz enerji.</p>
+
+    <a href="#uyeler" class="btn">
+        Üyeleri Keşfet
+    </a>
+
+</header>
+
+
+<!-- ÜYELER -->
+
+<section id="uyeler">
+
+    <h2>Meet The Girls ✨</h2>
+
+    <div class="members">
+
+        <div class="member">
+            <img src="images/esin.jpeg" alt="Esin">
+            <h3>ESİN</h3>
+        </div>
+
+        <div class="member">
+            <img src="images/hilal.jpeg" alt="Hilal">
+            <h3>HİLAL</h3>
+        </div>
+
+        <div class="member">
+            <img src="images/lidya.jpeg" alt="Lidya">
+            <h3>LİDYA</h3>
+        </div>
+
+        <div class="member">
+            <img src="images/mina.jpeg" alt="Mina">
+            <h3>MİNA</h3>
+        </div>
+
+        <div class="member">
+            <img src="images/sueda.jpeg" alt="Sueda">
+            <h3>SUEDA</h3>
+        </div>
+
+        <div class="member">
+            <img src="images/zoktay.jpeg" alt="Zeynep">
+            <h3>TAYFUNUNKİ</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MÜZİK -->
+
+<section class="music" id="muzik">
+
+    <h2>Manifest Music 🎵</h2>
+
+    <p>
+        Manifest'in müzik dünyasını keşfet!
+    </p>
+
+    <a
+            href="https://manifestgirlband.com/tr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn">
+        Manifest'i Keşfet
+    </a>
+
+</section>
+
+
+<!-- C# İLE İLETİŞİM -->
+
+<section class="api-section" id="iletisim">
+
+    <h2>Manifest Fan Zone 💗</h2>
+
+    <p>
+        C# backend'imizden bir mesaj alalım!
+    </p>
+
+    <button class="btn" onclick="mesajGetir()">
+        Mesajı Göster
+    </button>
+
+    <p id="sonuc"></p>
+
+</section>
+
+
+<!-- ALT BİLGİ -->
+
+<footer>
+
+    <h3>MANIFEST ✦</h3>
+
+    <p>Manifest Fan World 💗</p>
+
+    <p>
+        Hayranlar tarafından hazırlanmış
+        örnek web sitesi.
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    async function mesajGetir() {
+
+        const sonuc = document.getElementById("sonuc");
+
+        try {
+            const cevap = await fetch("/api/merhaba");
+
+            if (!cevap.ok) {
+                throw new Error("API isteği başarısız.");
+            }
+
+            const mesaj = await cevap.text();
+
+            sonuc.innerText = mesaj;
+
+        } catch (hata) {
+
+            sonuc.innerText =
+                "C# sunucusuna bağlanılamadı.";
+
+            console.error(hata);
+        }
+    }
+
+</script>
+
+</body>
+</html>
